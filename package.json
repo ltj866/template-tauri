@@ -1,0 +1,23 @@
+{
+    "name": "template-tauri",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "tauri-dev": "tauri dev",
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "tauri": "tauri"
+      },
+    "dependencies": {
+        "@tauri-apps/api": "^2",
+        "@tauri-apps/plugin-opener": "^2",
+        "phaser": "^3.88.2"
+    },
+    "devDependencies": {
+        "@tauri-apps/cli": "^2",
+        "typescript": "~5.6.2",
+        "vite": "^6.0.3"
+    }
+}
