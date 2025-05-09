@@ -1,4 +1,4 @@
-# Phaser Tauri TypeScript Template
+# Phaser Tauri Template
 
 This is a Phaser 3 project template that uses Tauri for bundling. It supports hot-reloading for quick development workflow, includes TypeScript support and scripts to generate production-ready builds.
 
@@ -9,6 +9,7 @@ This is a Phaser 3 project template that uses Tauri for bundling. It supports ho
 This template has been updated for:
 
 - [Phaser 3.88.2](https://github.com/phaserjs/phaser)
+- [Tauri 2](https://tauri.app/)
 - [TypeScript 5.7.2](https://github.com/microsoft/TypeScript)
 
 ![screenshot](screenshot.png)
@@ -16,6 +17,7 @@ This template has been updated for:
 ## Requirements
 
 [Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+[Rust](https://www.rust-lang.org/) is required to build the Tauri app. You can install it via [rustup](https://rustup.rs/).
 
 ## Available Commands
 
@@ -30,8 +32,6 @@ This template has been updated for:
 ## Writing Code
 
 After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm run dev`.
-
-The local development server runs on `http://localhost:8080` by default. Please see the Vite documentation if you wish to change this, or add SSL support.
 
 Once the server is running you can edit any of the files in the `src` folder. Vite will automatically recompile your code and then reload the browser.
 
@@ -83,9 +83,7 @@ When you issue the `npm run build` command, all static assets are automatically 
 
 ## Deploying to Production
 
-After you run the `npm run build` command, your code will be built into a single bundle and saved to the `dist` folder, along with any other assets your project imported, or stored in the public assets folder.
-
-In order to deploy your game, you will need to upload *all* of the contents of the `dist` folder to a public facing web server.
+After you run the `npm run build` command, a production build of your app will be created in the `src-tauri/target/release/bundle` folder. This will contain a `.app` file for macOS, a `.msi` installer for Windows.
 
 ## Customizing the Template
 
